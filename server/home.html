@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+
+    <!-- font link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+
+
+  </head>
+  <body onload=display_time(),displayCheckBox()>
+
+
+    <div id="menu-bars" class="fas fa-bars" onclick="menuToggle()"></div>
+
+    <!-- Header start -->
+    <header>
+
+      <a href="#home" class="logo"><span>Smart</span>Tech</a>
+
+      <nav class="navbar d-block">
+        <div class="image">
+            <img src="images/young-man.jpg" alt="">
+            <p class="username">ชื่อผู้ใช้งาน</p>
+        </div>
+        <a href="#home" onclick="menuToggle()"><span class="material-symbols-outlined">home</span>หน้าแรก</a>
+        <div class="dropdown">
+            <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="material-symbols-outlined">sensors</span>เซนเซอร์
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#tempt-sensor" onclick="menuToggle()">อุณหภูมิ</a></li>
+              <li><a class="dropdown-item" href="#" onclick="menuToggle()">ความชื้น</a></li>
+              <li><a class="dropdown-item" href="#" onclick="menuToggle()">ความเข้มแสง</a></li>
+              <li><a class="dropdown-item" href="#" onclick="menuToggle()">อัลตราโซนิก</a></li>
+              <li><a class="dropdown-item" href="#" onclick="menuToggle()">ระดับน้ำ</a></li>
+              <li><a class="dropdown-item" href="#" onclick="menuToggle()">ความเป็น กรด-เบส</a></li> 
+            </ul>
+          </div>
+        <a href="#service" onclick="menuToggle()"><span class="material-symbols-outlined">tune</span>แมนนวล</a>
+        <a href="#experience" onclick="menuToggle()"><span class="material-symbols-outlined time">schedule</span>เวลา</a>
+        <a href="#contact" onclick="menuToggle()"><span class="material-symbols-outlined camera">photo_camera</span>กล้อง</a>
+      </nav>
+      <div class="follow">
+        <div class="image">
+            <img src="images/KMUTT.png" alt="">
+        </div>
+      </div>
+    </header>
+
+    <div class="home" id="home">
+        <div class="container">
+
+            <!-- ส่วนบน -->
+            <div class="project-name">
+              <div class="container text-center">
+                <div class="row align-items-start">
+                  <div class="col column-line">
+                    <h1>SmartTech</h1>
+                  </div>
+                  <div class="col head-time">
+                    <h3>เทคโนโลยีเติบโต<br>ขึ้นในทุกๆวัน<br></h3>
+                    <h4 id="time"></h4>
+                  </div>
+                </div>
+            </div>
+        </div>
+         <!-- ส่วนควบคุมการแสดงผล -->
+          <button class="d-block btn-display" id="button-home">+</button>
+
+          <div class="container" id="select-display">
+            <div class="container text-center display-block-after-btn">
+              <div class="row align-items-start">
+                <div class="col column-line">
+                  <h1 class="head-block">เซนเซอร์</h1>
+                  <div class="display-checkbox">
+                    <p>อุณหภูมิ</p>
+                    <input type="checkbox" id="home-sensor-checkbox1" class="checkbox">
+                  </div>
+                  <div class="display-checkbox">
+                    <p>ความชื้น</p>
+                    <input type="checkbox" id="home-sensor-checkbox2" class="checkbox">
+                  </div>
+                  <div class="display-checkbox">
+                    <p>ความเข้มแสง</p>
+                    <input type="checkbox" id="home-sensor-checkbox3" class="checkbox">
+                  </div>
+                  <div class="display-checkbox">
+                    <p>อัลตราโซนิก</p>
+                    <input type="checkbox" id="home-sensor-checkbox4" class="checkbox"> 
+                  </div>
+                  <div class="display-checkbox">
+                    <p>ระดับน้ำ</p>
+                    <input type="checkbox" id="home-sensor-checkbox5" class="checkbox">
+                  </div>
+                  <div class="display-checkbox">
+                    <p class="ph-text">ค่า pH</p>
+                    <input type="checkbox" id="home-sensor-checkbox6" class="checkbox">
+                  </div>
+                </div>
+                <div class="col">
+                  <h1 class="head-block">แอคชูเอเตอร์</h1>
+                  <div class="display-checkbox">
+                    <p>เซอร์โวมอเตอร์</p>
+                    <input id="home-actuator-checkbox1" type="checkbox" class="checkbox">
+                  </div>
+                  <div class="display-checkbox">
+                    <p>ดีซี มอเตอร์</p>
+                    <input id="home-actuator-checkbox2" type="checkbox" class="checkbox">
+                  </div>
+                  <div class="display-checkbox">
+                    <p>อาร์จีบี แอลอีดี</p>
+                    <input id="home-actuator-checkbox3" type="checkbox" class="checkbox">
+                  </div>
+                  <div class="display-checkbox">
+                    <p>โซลินอยด์ วาล์ว</p>
+                    <input id="home-actuator-checkbox4" type="checkbox" class="checkbox">
+                  </div>
+                  <div class="display-checkbox">
+                    <p>บัซเซอร์</p>
+                    <input id="home-actuator-checkbox5" type="checkbox" class="checkbox">
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="container" id="display">
+          <div class="container text-center">
+            <div class="row align-items-start">
+              <div class="col column-line">
+                <div id="home-sensor-display1" class="sensor-display">
+                  <h1>อุณหภูมิ</h1>
+                  <p>27.68 °C</p>
+                </div>
+                <div id="home-sensor-display2" class="sensor-display">
+                  <h1 >ความชื้น</h1>
+                  <p>1789 Lux</p>
+                </div>
+                <div id="home-sensor-display3" class="sensor-display">
+                  <h1 >ความเข้มแสง</h1>
+                  <p>1789 Lux</p>
+                </div>
+                <div id="home-sensor-display4" class="sensor-display">
+                  <h1>อัลตราโซนิก</h1>
+                  <p>1789 Lux</p>
+                </div>
+                <div id="home-sensor-display5" class="sensor-display">
+                  <h1>ระดับน้ำ</h1>
+                  <p>1789 Lux</p>
+                </div>
+                <div id="home-sensor-display6" class="sensor-display">
+                  <h1 class="ph-text">ค่า pH</h1>
+                  <p>1789 Lux</p>
+                </div>
+              </div>
+              <div class="col">
+                <div id="home-actuator-display1" class="actuator-display">
+                  <h1>เซอร์โวมอเตอร์</h1>
+                  <div class="actuator-display-status">
+                    <p>สถานะ : online</p>
+                    <img src="images/green-icon.png" alt="">
+                  </div>
+                </div>
+                <div id="home-actuator-display2" class="actuator-display">
+                  <h1>ดีซี มอเตอร์</h1>
+                  <div class="actuator-display-status">
+                    <p>สถานะ : online</p>
+                    <img src="images/green-icon.png" alt="">
+                  </div>
+                </div>
+                <div id="home-actuator-display3" class="actuator-display">
+                  <h1>อาร์จีบี แอลอีดี</h1>
+                  <div class="actuator-display-status">
+                    <p>สถานะ : offline</p>
+                    <img src="images/red-icon.png" alt="">
+                  </div>
+                </div>
+                <div id="home-actuator-display4" class="actuator-display">
+                  <h1>โซลินอยด์ วาล์ว</h1>
+                  <div class="actuator-display-status">
+                    <p>สถานะ : online</p>
+                    <img src="images/green-icon.png" alt="">
+                  </div>
+                </div>
+                <div id="home-actuator-display5" class="actuator-display">
+                  <h1>บัซเซอร์</h1>
+                  <div class="actuator-display-status">
+                    <p>สถานะ : offline</p>
+                    <img src="images/red-icon.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="about" id="sensors">
+
+      <!-- สั่งเซนเซอร์อุนหภูมิ -->
+      <div id="tempt-sensor" class="sensor-command display-block">
+        <h1 class="head-block-temp">
+          <select>
+            <option value="actual value 1">อุณหภูมิเซลเซียส</option>
+            <option value="actual value 2">อุณหภูมิเคลวิน</option>
+            <option value="actual value 3">อุณหภูมิฟาเรนไฮต์</option>
+          </select>
+        </h1>
+        <div class="container">
+          <div class="row g-2">
+            <div class="col-6">
+                <div class="circlebar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="--value: 25"></div>
+            </div>
+            <div class="col-6">
+              <h1 class="command-text">25 องศาเซลเซียส</h1>
+          </div>
+          <div class="space-box col-12"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ตัวdisplayของอุณหภูมิ -->
+      <button class="d-block btn-display" id="button-command-temp">+</button>
+
+          <div class="container" id="select-display-command-temp">
+            <div class="container text-center display-block-after-btn">
+              <div class="row align-items-start">
+                <div class="col-12">
+                  <h1 class="head-block">แอคชูเอเตอร์</h1>
+                </div>
+                <div class="col">
+                  <div class="display-checkbox">
+                    <p>เซอร์โวมอเตอร์</p>
+                  </div>
+                  <div class="display-checkbox">
+                    <p>ดีซี มอเตอร์</p>
+                  </div>
+                  <div class="display-checkbox">
+                    <p>อาร์จีบี แอลอีดี</p>
+                  </div>
+                  <div class="display-checkbox">
+                    <p>โซลินอยด์ วาล์ว</p>
+                  </div>
+                  <div class="display-checkbox">
+                    <p>บัซเซอร์</p>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="display-checkbox">
+                    <input id="temp-servo" type="checkbox" class="checkbox" onchange="tempServoBoxChanged()">
+                  </div>
+                  <div class="display-checkbox">
+                    <input id="dc-motor" type="checkbox" class="checkbox" onchange="dcMotorBoxChanged()">
+                  </div>
+                  <div class="display-checkbox">
+                    <input id="rgb" type="checkbox" class="checkbox" onchange="rgbBoxChanged()">
+                  </div>
+                  <div class="display-checkbox">
+                    <input id="solenoid" type="checkbox" class="checkbox" onchange="solenoidBoxChanged()">
+                  </div>
+                  <div class="display-checkbox">
+                    <input id="buzzer" type="checkbox" class="checkbox" onchange="buzzerBoxChanged()">
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+      <!-- actuatorของอุณหภูมิ -->
+      <div class="container" id="temp-servo-display">
+        <div class="container text-center display-block">
+          <form action="/create" method="post">
+          <div class="row align-items-start">
+            <div class="col column-line command-actuator">
+              <h1 head-block>เซอร์โวมอเตอร์</h1>
+            </div>
+            <div class="col column-line command-actuator">
+              <h1>อุณหภูมิที่ต้องการให้ทำงาน</h1>
+              <h1>
+                <select name="speed">
+                  <option value="">ความเร็วการหมุนของเซอร์โวมอเตอร์</option>
+                  <option value="15">15</option>
+                  <option value="30">30</option>
+                  <option value="45">45</option>
+                  <option value="60">60</option>
+                  <option value="75">75</option>
+                  <option value="90">90</option>
+                </select>
+              </h1>
+              <h1>
+                <select name="degree">
+                  <option value="">องศาการหมุนของเซอร์โวมอเตอร์</option>
+                  <option value="15">15</option>
+                  <option value="30">30</option>
+                  <option value="45">45</option>
+                  <option value="60">60</option>
+                  <option value="75">75</option>
+                  <option value="90">90</option>
+                </select>
+              </h1>
+            </div>
+            <div class="col column-line command-actuator">
+                <input id="commandId" name="commandId" type="hidden" value="">
+                <input type="number" class="form-value" name="value" placeholder="ระบุอุณหภูมิ"><br>
+                <button type="submit" class="form-submit" onclick="addId()">บันทึก</button>
+            </div>
+          </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    
+    </section>
+
+    <section class="service" id="manual">
+      <div class="space-box-list col-12"></div>
+      <div class="container" id="list-manual">
+        <div class="container text-center display-block">
+          <div class="row align-items-start">
+            <div class="col-12 column-line">
+              <h1 class="head-block">รายการ</h1>
+            </div>
+            <div class="col-12 column-line list-display">
+              <p class="list-display-text">อาร์จีบี แอลอีดี</p>
+              <button class="list-display-text edit-btn">แก้ไข</button>
+              <button class="list-display-text delete-btn">ลบ</button>
+              <p class="list-display-text">สถานะ:</p>
+              <img class="img-status" src="images/red-icon.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="timer">
+      <h1 id="test"></h1>
+    </section>
+
+    <section class="portfolio" id="camera">
+
+    </section>
+
+
+
+    <!-- Body start -->
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- custom js file link -->
+    <script src="js/script.js"></script>
+
+
+  </body>
+</html>

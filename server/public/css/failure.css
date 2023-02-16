@@ -1,0 +1,16 @@
+
+  *{
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  html{
+    scroll-behavior: smooth;
+  }
+  
+  body{
+    background-color: #afc1ca !important;
+  }
+
+.fail{
+    padding-top: 50px;
+}

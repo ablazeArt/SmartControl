@@ -10,7 +10,7 @@ const HomeDisplay = () => {
             </div>
             <div id="home-sensor-display2" className="sensor-display">
               <h1>ความชื้น</h1>
-              <p>1789 Lux</p>
+              <p>39.58 %</p>
             </div>
             <div id="home-sensor-display3" className="sensor-display">
               <h1>ความเข้มแสง</h1>
@@ -18,15 +18,15 @@ const HomeDisplay = () => {
             </div>
             <div id="home-sensor-display4" className="sensor-display">
               <h1>อัลตราโซนิก</h1>
-              <p>1789 Lux</p>
+              <p autocapitalize="none">45.31 cm</p>
             </div>
             <div id="home-sensor-display5" className="sensor-display">
               <h1>ระดับน้ำ</h1>
-              <p>1789 Lux</p>
+              <p>17.52 m</p>
             </div>
             <div id="home-sensor-display6" className="sensor-display">
               <h1 className="ph-text">ค่า pH</h1>
-              <p>1789 Lux</p>
+              <p>6.8 pH</p>
             </div>
           </div>
           <div className="col">

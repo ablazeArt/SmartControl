@@ -1,18 +1,98 @@
 <!DOCTYPE html>
-<!--
- @license
- Copyright 2019 Google LLC. All Rights Reserved.
- SPDX-License-Identifier: Apache-2.0
--->
 <html>
   <head>
-    <title>Add Map</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <title>My Website</title>
+    <style>
+      /* Add some basic styles for the navbar */
+      nav {
+        background-color: #333;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+      }
 
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <script type="module" src="/test.js"></script>
+      nav a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 20px;
+      }
+
+      nav a.active {
+        color: red;
+      }
+    </style>
   </head>
   <body>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15501.392358545312!2d100.6122773!3d13.75787!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29e1916b259d5%3A0x3e9fc8c4d49bd59d!2z4LiZ4Li44Lij4Lix4LiB4Lip4LmM4LiZ4Liy4Lin4Liy!5e0!3m2!1sth!2sth!4v1676138282459!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- Add the navbar to the top of the page -->
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Add the content sections to the page -->
+    <section id="home">
+      <h1>Welcome to my website!</h1>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum massa id aliquam dignissim.</p>
+    </section>
+
+    <section id="services">
+      <h2>Services</h2>
+      <ul>
+        <li>Service 1</li>
+        <li>Service 2</li>
+        <li>Service 3</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" /><br /><br />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" /><br /><br />
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+
+    <script>
+      // Get all the navbar links
+      const links = document.querySelectorAll("nav a");
+
+      // Add an event listener to the window object to detect when the user scrolls
+      window.addEventListener("scroll", () => {
+        // Get the current scroll position
+        const scrollPosition = window.scrollY;
+
+        // Loop through all the sections of the website
+        sections.forEach((section) => {
+          // Get the position and height of each section
+          const sectionPosition = section.offsetTop;
+          const sectionHeight = section.offsetHeight;
+
+          // Check if the user is currently viewing this section
+          if (scrollPosition >= sectionPosition && scrollPosition < sectionPosition + sectionHeight) {
+            // Remove the "active" class from all the navbar links
+            links.forEach((link) => {
+              link.classList.remove("active");
+            });
+
+            // Add the "active" class to the corresponding navbar link
+            const href = `#${section.id}`;
+            const correspondingLink = document.querySelector(`nav a[href="${href}"]`);
+            correspondingLink.classList.add("active");
+          }
+        });
+      });
+    </script>
   </body>
 </html>

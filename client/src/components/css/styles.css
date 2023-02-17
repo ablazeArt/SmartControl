@@ -285,6 +285,7 @@ input{
 
 .sensor-display p{
     font-size: 1.5rem;
+    text-transform: none;
 }
 
 .actuator-display{

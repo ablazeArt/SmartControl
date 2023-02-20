@@ -570,6 +570,21 @@ select{
     background-color: rgb(247, 85, 85);
 }
 
+.actuator-name {
+    background-color: var(--main-color);
+}
+
+.value-display {
+    background-color: #B9F3FC;
+}
+
+.actuator-action {
+    background-color: #FCFFE7;
+}
+
+.status-command-display {
+    background-color: #FFE7CC;
+}
 /*responsive*/
 @media (max-width:991px){
 

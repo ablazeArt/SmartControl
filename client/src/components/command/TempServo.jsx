@@ -50,13 +50,13 @@ const TempServo = (props) => {
       <div>
         {commands.map((command, index) => (
                 <div className="col-12 column-line list-display">
-                  <p className="list-display-text">{command.actuatorName}</p>
-                  <p className="list-display-text">อุณหภูมิที่เริ่มทำงาน:{command.value}</p>
-                  <p className="list-display-text">ความเร็วการหมุน:{command.speed}</p>
-                  <p className="list-display-text">องศาการหมุน:{command.degree}</p>
+                  <p className="list-display-text actuator-name">{command.actuatorName}</p>
+                  <p className="list-display-text value-display">อุณหภูมิที่เริ่มทำงาน:{command.value}</p>
+                  <p className="list-display-text actuator-action">ความเร็วการหมุน:{command.speed}</p>
+                  <p className="list-display-text actuator-action">องศาการหมุน:{command.degree}</p>
                   <button><Link to={`command/edit/${command.commandId}`} className="list-display-text edit-btn">แก้ไข</Link></button>
                   <button onClick={()=>confirmDelete(command.commandId)}><a className="list-display-text delete-btn">ลบ</a></button>
-                  <p className="list-display-text">สถานะการทำงาน:</p>
+                  <p className="list-display-text status-command-display">สถานะการทำงาน:</p>
                   <img
                     className="img-status"
                     src={require("../images/red-icon.png")}

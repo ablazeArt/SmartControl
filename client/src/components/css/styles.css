@@ -542,7 +542,7 @@ select{
     background-color:rgba(174, 171, 171, 0.5);
     padding: 5px;
     border: 0.5px solid rgb(105, 105, 111);
-    border-radius: 8px;
+    border-radius: 3px;
     font-size: 1.3rem;
 }
 
@@ -552,7 +552,7 @@ select{
 
 .edit-btn{
     border-radius: 8px;
-    background-color: rgb(154, 147, 147);
+    background-color: #36dd73;
     color: #000;
 }
 
@@ -572,14 +572,6 @@ select{
 
 .actuator-name {
     background-color: var(--main-color);
-}
-
-.value-display {
-    background-color: #B9F3FC;
-}
-
-.actuator-action {
-    background-color: #FCFFE7;
 }
 
 .status-command-display {

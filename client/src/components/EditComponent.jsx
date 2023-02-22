@@ -82,7 +82,7 @@ const EditComponent = () => {
               </div>
             </form>
           </div>
-          <button className="return-btn"><HashLink smooth to={"/#temp-servo-display"}>กลับไปยังหน้าคำสั่ง</HashLink></button>
+          <button className="return-btn"><HashLink smooth to={"/#list-manual"}>กลับไปยังหน้าคำสั่ง</HashLink></button>
         </div>
       </div>
     );

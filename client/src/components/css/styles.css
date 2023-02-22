@@ -557,7 +557,8 @@ select{
 }
 
 .edit-btn:hover{
-    background-color: rgb(177, 168, 168);
+    background-color: #45ef83;
+    color: #000;
 }
 
 .delete-btn{
@@ -568,6 +569,7 @@ select{
 }
 .delete-btn:hover{
     background-color: rgb(247, 85, 85);
+    color: #000;
 }
 
 .actuator-name {

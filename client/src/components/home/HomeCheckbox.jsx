@@ -18,9 +18,9 @@ const HomeCheckbox = () => {
         <div className={`container text-center display-block ${isShowDisplayBox ? '' : 'hidden'}`}>
           <div className="row align-items-start">
             <div className="col column-line">
-              <h1 className="head-block">เซนเซอร์</h1>
+              <h1 className="head-block">Sensor</h1>
               <div className="display-checkbox">
-                <p>อุณหภูมิ</p>
+                <p>Temperature</p>
                 <input
                   type="checkbox"
                   id="home-sensor-checkbox1"
@@ -28,7 +28,7 @@ const HomeCheckbox = () => {
                 />
               </div>
               <div className="display-checkbox">
-                <p>ความชื้น</p>
+                <p>Humidity</p>
                 <input
                   type="checkbox"
                   id="home-sensor-checkbox2"
@@ -36,7 +36,7 @@ const HomeCheckbox = () => {
                 />
               </div>
               <div className="display-checkbox">
-                <p>ความเข้มแสง</p>
+                <p>Light Intensity</p>
                 <input
                   type="checkbox"
                   id="home-sensor-checkbox3"
@@ -44,7 +44,7 @@ const HomeCheckbox = () => {
                 />
               </div>
               <div className="display-checkbox">
-                <p>อัลตราโซนิก</p>
+                <p>Ultrasonic</p>
                 <input
                   type="checkbox"
                   id="home-sensor-checkbox4"
@@ -52,7 +52,7 @@ const HomeCheckbox = () => {
                 />
               </div>
               <div className="display-checkbox">
-                <p>ระดับน้ำ</p>
+                <p>Level</p>
                 <input
                   type="checkbox"
                   id="home-sensor-checkbox5"
@@ -60,7 +60,7 @@ const HomeCheckbox = () => {
                 />
               </div>
               <div className="display-checkbox">
-                <p className="ph-text">ค่า pH</p>
+                <p className="ph-text">pH</p>
                 <input
                   type="checkbox"
                   id="home-sensor-checkbox6"
@@ -69,9 +69,9 @@ const HomeCheckbox = () => {
               </div>
             </div>
             <div className="col">
-              <h1 className="head-block">แอคชูเอเตอร์</h1>
+              <h1 className="head-block">Actuator</h1>
               <div className="display-checkbox">
-                <p>เซอร์โวมอเตอร์</p>
+                <p>Servo Motor</p>
                 <input
                   id="home-actuator-checkbox1"
                   type="checkbox"
@@ -79,7 +79,7 @@ const HomeCheckbox = () => {
                 />
               </div>
               <div className="display-checkbox">
-                <p>ดีซี มอเตอร์</p>
+                <p>DC Motor</p>
                 <input
                   id="home-actuator-checkbox2"
                   type="checkbox"
@@ -87,7 +87,7 @@ const HomeCheckbox = () => {
                 />
               </div>
               <div className="display-checkbox">
-                <p>อาร์จีบี แอลอีดี</p>
+                <p>RGB LED</p>
                 <input
                   id="home-actuator-checkbox3"
                   type="checkbox"
@@ -95,7 +95,7 @@ const HomeCheckbox = () => {
                 />
               </div>
               <div className="display-checkbox">
-                <p>โซลินอยด์ วาล์ว</p>
+                <p>Solinoid Valve</p>
                 <input
                   id="home-actuator-checkbox4"
                   type="checkbox"
@@ -103,7 +103,7 @@ const HomeCheckbox = () => {
                 />
               </div>
               <div className="display-checkbox">
-                <p>บัซเซอร์</p>
+                <p>Buzzer</p>
                 <input
                   id="home-actuator-checkbox5"
                   type="checkbox"

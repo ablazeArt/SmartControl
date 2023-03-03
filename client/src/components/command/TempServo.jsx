@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
+import { json, Link } from "react-router-dom";
 
 const TempServo = (props) => {
   const [commands, setCommands] = useState([]);
@@ -53,18 +53,18 @@ const TempServo = (props) => {
       {commands.map((command, index) => (
         <div className="col-12 column-line list-display">
           <p className="list-display-text actuator-name">{command.actuatorName}</p>
-          <p className="list-display-text">อุณหภูมิที่เริ่มทำงาน:{command.value}</p>
-          <p className="list-display-text">ความเร็วการหมุน:{command.speed}</p>
-          <p className="list-display-text">องศาการหมุน:{command.degree}</p>
+          <p className="list-display-text">Initail Temperature:{command.value}</p>
+          <p className="list-display-text">Rotational Speed:{command.speed}</p>
+          <p className="list-display-text">Rotational Degree:{command.degree}</p>
           <button>
             <Link to={`command/edit/${command.commandId}`} className="list-display-text edit-btn">
-              แก้ไข
+              Edit
             </Link>
           </button>
           <button onClick={() => confirmDelete(command.commandId)}>
-            <a className="list-display-text delete-btn">ลบ</a>
+            <a className="list-display-text delete-btn">Delete</a>
           </button>
-          <p className="list-display-text status-command-display">สถานะการทำงาน:</p>
+          <p className="list-display-text status-command-display">Work Status:</p>
           <img className="img-status" src={require("../images/red-icon.png")} alt="" />
         </div>
       ))}

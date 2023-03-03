@@ -1,18 +1,17 @@
 import { useState } from "react";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 
 const NavbarComponent = () => {
-
   const [isNavbarActive, setIsNavbarActive] = useState(false);
 
-  const menuToggle = ()=>{
-    setIsNavbarActive(current => !current);
-  }
-  
+  const menuToggle = () => {
+    setIsNavbarActive((current) => !current);
+  };
+
   return (
     <div>
-      <div id="menu-bars" className={`fas ${isNavbarActive ? 'fa-times' : 'fa-bars'}`} onClick={menuToggle}></div>
-      <header className={isNavbarActive ? 'active' : ''}>
+      <div id="menu-bars" className={`fas ${isNavbarActive ? "fa-times" : "fa-bars"}`} onClick={menuToggle}></div>
+      <header className={isNavbarActive ? "active" : ""}>
         <a href="#home" className="logo">
           <span>Smart</span>Tech
         </a>
@@ -20,71 +19,57 @@ const NavbarComponent = () => {
         <nav className="navbar d-block">
           <div className="image">
             <img src={require("./images/young-man.jpg")} alt="" />
-            <p className="username">ชื่อผู้ใช้งาน</p>
+            <p className="username">Username</p>
           </div>
           <HashLink smooth to={"/#home"} onClick={menuToggle}>
-            <span className="material-symbols-outlined">home</span>หน้าแรก
+            <span className="material-symbols-outlined">home</span>HOME
           </HashLink>
           <div className="dropdown">
-            <a
-              className="dropdown-toggle"
-              href="#"
-              role="button"
-              id="dropdownMenuLink"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <span className="material-symbols-outlined">sensors</span>เซนเซอร์
+            <a className="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+              <span className="material-symbols-outlined">sensors</span>SENSORS
             </a>
             <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
               <li>
-                <HashLink
-                  className="dropdown-item"
-                  href="#tempt-sensor"
-                  onClick={menuToggle}
-                  smooth to={"/#temp-servo-display"}
-                >
-                  อุณหภูมิ
+                <HashLink className="dropdown-item" href="#tempt-sensor" onClick={menuToggle} smooth to={"/#temp-servo-display"}>
+                  Temperature
                 </HashLink>
               </li>
               <li>
                 <a className="dropdown-item" href="#" onClick={menuToggle}>
-                  ความชื้น
+                  Humidity
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="#" onClick={menuToggle}>
-                  ความเข้มแสง
+                  Ligth Intensity
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="#" onClick={menuToggle}>
-                  อัลตราโซนิก
+                  Ultrasonic
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="#" onClick={menuToggle}>
-                  ระดับน้ำ
+                  Level
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="#" onClick={menuToggle}>
-                  ความเป็น กรด-เบส
+                  pH
                 </a>
               </li>
             </ul>
           </div>
           <a href="#service" onClick={menuToggle}>
-            <span className="material-symbols-outlined">tune</span>แมนนวล
+            <span className="material-symbols-outlined">tune</span>MANUAL
           </a>
           <a href="#experience" onClick={menuToggle}>
-            <span className="material-symbols-outlined time">schedule</span>เวลา
+            <span className="material-symbols-outlined time">schedule</span>TIMER
           </a>
           <a href="#contact" onClick={menuToggle}>
-            <span className="material-symbols-outlined camera">
-              photo_camera
-            </span>
-            กล้อง
+            <span className="material-symbols-outlined camera">photo_camera</span>
+            CAMERA
           </a>
         </nav>
         <div className="follow">

@@ -34,19 +34,19 @@ const EditComponent = () => {
       <div>
         <div className="container" id="edit-temp-servo-display">
           <div className="head-edit">
-            <h1>แก้ไขคำสั่ง</h1>
+            <h1>Edit Command</h1>
           </div>
           <div className="container text-center display-block main-block" style={{paddingTop: '23px'}}>
             <form onSubmit={submitForm}>
               <div className="row align-items-start">
                 <div className="col column-line command-actuator">
-                  <h1 head-block>เซอร์โวมอเตอร์</h1>
+                  <h1 head-block>Servo Motor</h1>
                 </div>
                 <div className="col column-line command-actuator">
-                  <h1>อุณหภูมิที่ต้องการให้ทำงาน</h1>
+                  <h1 className="edit-value">The Desired Temperature</h1>
                   <h1>
                     <select onChange={inputValue("speed")}>
-                      <option value="">ความเร็วการหมุนเดิม:{speed}</option>
+                      <option value="">Previous Speed:{speed}</option>
                       <option value="15">15</option>
                       <option value="30">30</option>
                       <option value="45">45</option>
@@ -57,7 +57,7 @@ const EditComponent = () => {
                   </h1>
                   <h1>
                     <select onChange={inputValue("degree")}>
-                      <option value="">องศากาหมุนเดิม:{degree}</option>
+                      <option value="">Previous Degree:{degree}</option>
                       <option value="15">15</option>
                       <option value="30">30</option>
                       <option value="45">45</option>
@@ -76,13 +76,13 @@ const EditComponent = () => {
                     onChange={inputValue("value")}
                   />
                   <button type="submit" className="form-submit">
-                    อัพเดท
+                    Update
                   </button>
                 </div>
               </div>
             </form>
           </div>
-          <button className="return-btn"><HashLink smooth to={"/#list-manual"}>กลับไปยังหน้าคำสั่ง</HashLink></button>
+          <button className="return-btn"><HashLink smooth to={"/#list-manual"}>Back to command page</HashLink></button>
         </div>
       </div>
     );

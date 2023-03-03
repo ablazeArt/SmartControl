@@ -1,8 +1,6 @@
 const express = require("express");
 const cors =  require("cors")
 const bodyParser = require("body-parser");
-const request = require("request");
-const https = require("https");
 const mongoose = require("mongoose")
 const {create, getAllCommands, singleCommand, remove, modify} = require("./controller/webController")
 require("dotenv").config()
@@ -40,8 +38,6 @@ app.get("/", function(req, res) {
 app.post("/", function(req, res) {
   var firstName = req.body.firstName;
   var lastName = req.body.lastName;
-  var email = req.body.email;
-
 
   async function run() {
 

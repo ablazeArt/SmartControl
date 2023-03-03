@@ -7,7 +7,7 @@ const HomeTop = ()=>{
               <h1>SmartTech</h1>
             </div>
             <div className="col head-time">
-              <h4>เวลาขณะนี้ :</h4>
+              <h4>Current Time :</h4>
               <h4 id="time"></h4>
             </div>
           </div>

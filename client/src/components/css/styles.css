@@ -21,7 +21,7 @@ html{
   scroll-behavior: smooth;
 }
 
-body{
+.body-main{
   background-color:#f7f7f7 !important;
   padding-left:30rem;
 }
@@ -365,6 +365,10 @@ input{
     top:-3px;
 }
 
+.edit-block {
+    width: 1100px;
+}
+
 /* หน้าเซนเซอร์ */
 #sensors{
     font-size: 1rem;
@@ -451,12 +455,12 @@ input{
   }
   
   /* demo */
-  body {
+  /* body {
     margin: 0;
     display: grid;
     place-items: center;
     background: #f0f8ff;
-  }
+  } */
  
 
 /* Actuatorของอุณหภูมิ */
@@ -594,7 +598,7 @@ select {
         font-size: 55%;
     }
 
-    body{
+    .body-main{
         padding: 0;
     }
 
@@ -622,6 +626,10 @@ select {
     [role="progressbar"]{
         margin-left: 0px;
     }
+
+    .edit-block {
+        width: 600px;
+    }
 }
 
 @media (max-width:770px){
@@ -645,6 +653,10 @@ select {
 
     .experience .box-container .box{
         padding-right: 0;
+    }
+
+    .edit-block {
+        width: 300px;
     }
 
 }

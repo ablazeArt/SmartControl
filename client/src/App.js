@@ -1,20 +1,22 @@
 import "./App.css";
 import "./components/css/styles.css";
 import NavbarComponent from "./components/NavbarComponent";
-import FormComponent from "./components/FormComponent";
 import CommandSet from "./components/CommandSet";
 import HomeComponent from "./components/home/HomeComponent";
 import Temp from "./components/Temp";
+import FormTempCommand from "./components/FormCommand/FormTemptCommand/FormTempCommnad";
 
 function App() {
   return (
-    <div className="body-component">
-      <NavbarComponent />
-      <HomeComponent />
-      <Temp/>
-      <FormComponent />
-      <CommandSet />
-    </div>
+    <body className="body-main">
+      <div className="body-component">
+        <NavbarComponent />
+        <HomeComponent />
+        <Temp />
+        <CommandSet />
+        <FormTempCommand />
+      </div>
+    </body>
   );
 }
 

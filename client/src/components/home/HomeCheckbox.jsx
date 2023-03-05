@@ -8,14 +8,14 @@ const HomeCheckbox = () => {
   return (
     <div>
       <button
-        className="d-block btn-display $is"
+        className="d-block btn-display-home"
         id="button-home"
         onClick={displayBoxToggle}
       >
-        +
+        Manage  Homepage
       </button>
-      <div className="container" id="select-display">
-        <div className={`container text-center display-block ${isShowDisplayBox ? '' : 'hidden'}`}>
+      <div className="container display-manage" id="select-display">
+        <div className={`container text-center display-block ${isShowDisplayBox ? 'is-show' : 'is-hidden'}`}>
           <div className="row align-items-start">
             <div className="col column-line">
               <h1 className="head-block">Sensor</h1>

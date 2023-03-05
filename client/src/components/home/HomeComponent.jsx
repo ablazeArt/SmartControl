@@ -105,6 +105,7 @@ const HomeComponent = () => {
     }, 1000);
     displayCheckBox();
   }, []);
+  
   return (
     <div className="home" id="home">
       <div className="container">

@@ -4,7 +4,7 @@ import NavbarComponent from "./components/NavbarComponent";
 import CommandSet from "./components/CommandSet";
 import HomeComponent from "./components/home/HomeComponent";
 import Temp from "./components/Temp";
-import FormTempCommand from "./components/FormCommand/FormTemptCommand/FormTempCommnad";
+import FormTempComponent from "./components/FormCommand/FormTemptCommand/FormTempComponent";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
         <HomeComponent />
         <Temp />
         <CommandSet />
-        <FormTempCommand />
+        <FormTempComponent />
       </div>
     </body>
   );
